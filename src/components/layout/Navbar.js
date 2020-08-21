@@ -20,7 +20,8 @@ const Navbar = ({ icon, title }) => {
         {title}
       </h1>
       <ul>
-        {/* if you use a tag when you've searched for smth and then go to about page and return, the search-result is cleared... state is cleared
+        {/* if you use a tag when you've searched for smth and then go to about page and return, the search-result is cleared... 
+                state is cleared
                 meaning that is not client-side routing... we need client-side routing... use Link to make state intact*/}
         <li>
           <Link to='/'>Home</Link>

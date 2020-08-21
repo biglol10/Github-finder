@@ -45,7 +45,7 @@ export class User extends Component {
         <Link to='/' className='btn btn-light'>
           Back to search
         </Link>
-        Hirable:{' '}
+        Hirable:
         {hireable ? (
           <i className='fas fa-check text-success' />
         ) : (
@@ -104,6 +104,8 @@ export class User extends Component {
           <div className='badge badge-dark'>Public Gists: {public_gists}</div>
         </div>
         <Repos repos={repos} />
+        {/*You could call the get repos from the repos component but then you'd have to pass it up twice.
+         That's that's called Prop drilling when you keep passing up props through components */}
       </Fragment>
     );
   }

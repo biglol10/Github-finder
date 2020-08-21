@@ -105,6 +105,8 @@ class App extends Component {
           <div className='container'>
             <Alert alert={this.state.alert} />
             <Switch>
+              {/* wrap all our roots in a switch so that it shows one at a time and then we're gonna
+                        add a root */}
               <Route
                 exact // exact path
                 path='/'
@@ -121,9 +123,11 @@ class App extends Component {
                 )}
               />
               <Route exact path='/about' component={About} />
-              {/* :login to know which user it is(username/id will be passed)... 
-              whatever props is passed in we need to add those */}
+              {/* just a whole page */}
+
               <Route
+                /* :login to know which user it is(username/id will be passed)... 
+              whatever props is passed in we need to add those */
                 exact
                 path='/user/:login'
                 render={(props) => (
